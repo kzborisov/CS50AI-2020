@@ -64,7 +64,6 @@ def load_data(data_dir):
     for folder in os.listdir(data_dir):
         folder_path = os.path.join(data_dir, folder)
         if os.path.isdir(folder_path):
-            print(f"Loading files from {folder_path}...")
             for file in os.listdir(folder_path):
                 try:
                     image = cv2.imread(os.path.join(folder_path, file), cv2.IMREAD_COLOR)
